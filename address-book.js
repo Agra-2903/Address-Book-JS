@@ -95,3 +95,8 @@ function countByCityOrState() {
 function sortContactsByName() {
     addressBook.sort((a, b) => a.firstName.localeCompare(b.firstName));
 }
+
+// UC12: Ability to sort contacts by City, State, or Zip
+function sortContactsBy(criteria) {
+    addressBook.sort((a, b) => a[criteria].localeCompare(b[criteria]));
+}
