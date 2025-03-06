@@ -54,3 +54,8 @@ function editContact(name, updatedContact) {
 function deleteContact(name) {
     addressBook = addressBook.filter(contact => contact.firstName !== name);
 }
+
+// UC6: Ability to count the number of contacts
+function getContactCount() {
+    return addressBook.reduce((count) => count + 1, 0);
+}
