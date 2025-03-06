@@ -38,3 +38,14 @@ function addContact(contact) {
     validateContact(contact);
     addressBook.push(contact);
 }
+
+// UC4: Ability to find a contact by name and edit it
+function editContact(name, updatedContact) {
+    let index = addressBook.findIndex(contact => contact.firstName === name);
+    if (index !== -1) {
+        validateContact(updatedContact);
+        addressBook[index] = updatedContact;
+    } else {
+        console.log("Contact Not Found!");
+    }
+}
