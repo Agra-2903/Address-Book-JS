@@ -59,3 +59,12 @@ function deleteContact(name) {
 function getContactCount() {
     return addressBook.reduce((count) => count + 1, 0);
 }
+
+// UC7: Ability to check for duplicate entries
+function addContactWithDuplicateCheck(contact) {
+    if (addressBook.some(c => c.firstName === contact.firstName && c.lastName === contact.lastName)) {
+        console.log("Duplicate Contact Found!");
+        return;
+    }
+    addContact(contact);
+}
