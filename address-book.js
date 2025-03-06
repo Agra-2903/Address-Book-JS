@@ -90,3 +90,8 @@ function countByCityOrState() {
     });
     return countMap;
 }
+
+// UC11: Ability to sort contacts alphabetically by name
+function sortContactsByName() {
+    addressBook.sort((a, b) => a.firstName.localeCompare(b.firstName));
+}
