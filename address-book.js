@@ -68,3 +68,8 @@ function addContactWithDuplicateCheck(contact) {
     }
     addContact(contact);
 }
+
+// UC8: Ability to search a person in a particular city or state
+function searchByCityOrState(city, state) {
+    return addressBook.filter(contact => contact.city === city || contact.state === state);
+}
