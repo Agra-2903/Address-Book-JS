@@ -49,3 +49,8 @@ function editContact(name, updatedContact) {
         console.log("Contact Not Found!");
     }
 }
+
+// UC5: Ability to delete a contact by name
+function deleteContact(name) {
+    addressBook = addressBook.filter(contact => contact.firstName !== name);
+}
