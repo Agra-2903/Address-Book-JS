@@ -73,3 +73,10 @@ function addContactWithDuplicateCheck(contact) {
 function searchByCityOrState(city, state) {
     return addressBook.filter(contact => contact.city === city || contact.state === state);
 }
+
+// UC9: Ability to view persons by city or state
+function viewByCityOrState(city, state) {
+    console.log(`Contacts in ${city || state}:`);
+    addressBook.filter(contact => contact.city === city || contact.state === state)
+        .forEach(contact => console.log(contact.toString()));
+}
