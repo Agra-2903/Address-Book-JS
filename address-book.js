@@ -80,3 +80,13 @@ function viewByCityOrState(city, state) {
     addressBook.filter(contact => contact.city === city || contact.state === state)
         .forEach(contact => console.log(contact.toString()));
 }
+
+// UC10: Ability to count contacts by city or state
+function countByCityOrState() {
+    let countMap = {};
+    addressBook.forEach(contact => {
+        countMap[contact.city] = (countMap[contact.city] || 0) + 1;
+        countMap[contact.state] = (countMap[contact.state] || 0) + 1;
+    });
+    return countMap;
+}
